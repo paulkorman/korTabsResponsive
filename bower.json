@@ -1,0 +1,17 @@
+{
+  "name": "korTabsResponsive",
+  "homepage": "https://github.com/paulkorman/korTabsResponsive",
+  "authors": [
+    "pasha <fastist@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
