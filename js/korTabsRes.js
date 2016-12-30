@@ -2,7 +2,8 @@
 
     // значение по умолчаниюf
     var defaults = {
-        breakpoint: false // ширина окна в пикселях, при котором происходит трансвормация в список
+        breakpoint: false, // ширина окна в пикселях, при котором происходит трансвормация в список
+        fade: false // еффект растворения
     };
 
     // актуальные настройки, глобальные
@@ -17,6 +18,7 @@
         var wrapElem = this.parent();
         var tabsElem = this.children(".tabs");
         var containerTab = this.children(".container-tab");
+        var tabElem = containerTab.children(".tab");
 
         this.addClass("kortabs-wrap");
 
@@ -96,8 +98,17 @@
                 tabsElem.hide();
                 korselect.children("span").text($(this).text());
             }
-            containerTab.children(".tab").removeClass("active");
-            containerTab.children(".tab").eq(indexElem).addClass("active");
+
+            if(options.fade) {
+                containerTab.children(".tab.active").fadeOut(200, function(){
+                    tabElem.removeClass("active");
+                    tabElem.eq(indexElem).fadeIn(100);
+                    tabElem.eq(indexElem).addClass("active");
+                });
+            } else {
+                tabElem.removeClass("active");
+                tabElem.eq(indexElem).addClass("active");
+            }
         });
 
         // отображение предварительно скрытых вкладок
