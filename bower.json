@@ -4,11 +4,8 @@
   "authors": [
     "pasha <fastist@gmail.com>"
   ],
-  "description": "",
-  "main": [
-    "index.html",
-    "js/korTabsRes.js"
-  ],
+  "description": "korTabsResponsive",
+  "main": "index.html",
   "license": "MIT",
   "ignore": [
     "**/.*",
