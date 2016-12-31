@@ -5,7 +5,9 @@
     "pasha <fastist@gmail.com>"
   ],
   "description": "korTabsResponsive",
-  "main": "js/korTabsRes.js",
+  "main": [
+    "js/korTabsRes.js"
+  ],
   "license": "MIT",
   "ignore": [
     "**/.*",
